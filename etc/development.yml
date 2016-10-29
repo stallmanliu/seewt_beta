@@ -1,0 +1,20 @@
+protocol: http
+hostname: localhost
+port: 3000
+authn_strategies:
+  - dummy
+hooks:
+  - dummy
+backend: dummy
+log_level: debug
+log_requests_in_debug: true
+tempdir: /tmp/rocci_server
+force_ssl: false
+memcaches:
+  - 'localhost:11211'
+cors_support:
+  enable: false
+  origins:
+  - 'localhost'
+  - '127.0.0.1'
+allow_experimental_mimes: true

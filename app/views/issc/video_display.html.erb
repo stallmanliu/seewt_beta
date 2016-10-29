@@ -1,0 +1,61 @@
+ 
+<%= render template: "shared/issc_header" %>
+
+<% require "nokogiri" %>
+<% require "open-uri" %>
+
+<div class = "content">
+
+	<div class = "left_content">
+		<div id="video_play">
+			<div id="video_container">
+				<video id="video_0" controls="controls" preload="load">
+					<source src="/videos/GameOfThrones.mp4" type="video/mp4">
+					Your Browser does not support this video !
+				</video>
+				<iframe src="https://www.youtube.com/embed/og1jM8p1McM" frameborder="0" scrolling="auto" allowfullscreen></iframe>
+				<!-- <video id="video_1" controls="controls" preload="load">
+					<source src="https://youtu.be/og1jM8p1McM" type="video/mp4">
+					Your Browser does not support this video !
+				</video> -->
+			</div>
+		</div>
+	</div>
+
+	<div class = "center_content">
+		<div id="video_play">
+			<div id="video_container">
+				<video id="video_0" class="video-js" controls preload="load" style="display:inline-block;text-align:center;position:flow;width:819px;height:460px;margin:0 0 20px 0;" data-setup="{}">
+					<source src="<%= @vurl %>" type="<%= @vtype %>">
+					Your Browser does not support this video !
+				</video>
+				<video id="video_1" controls="controls" preload="load">
+					<source src="<%= @vurl %>" type="<%= @vtype %>">
+					Your Browser does not support this video !
+				</video>
+			</div>
+		</div>
+	</div>
+
+	<div class = "right_content">
+		<div id="video_play">
+			<div id="video_container">
+				<% html = open("http://www.gotporn.com/fucked-in-traffic-blonde-cunt-claudia-macc-giving-a-bj-to-her-chauffer/video-5561863", "User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36") %>		
+				<% doc = Nokogiri::HTML(html) %>
+				<video id="video_0" controls="controls" preload="load">
+					<source src=<%= doc.css("#html5-player")[0].attribute("src").value %> type="video/mp4">
+					Your Browser does not support this video !
+				</video>
+				<% html = open("http://www.gotporn.com/petite-blonde-chick-gets-pulled-over-and-fucked-on-cop-car/video-5549041", "User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36") %>		
+				<% doc = Nokogiri::HTML(html) %>
+				<video id="video_1" controls="controls" preload="load">
+					<source src=<%= doc.css("#html5-player")[0].attribute("src").value %> type="video/mp4">
+					Your Browser does not support this video !
+				</video>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<%= render template: "shared/issc_footer" %>

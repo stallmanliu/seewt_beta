@@ -1,0 +1,36 @@
+
+<body background="/background.jpg">
+
+<%= render template: "shared/header" %>
+
+<h1 style="text-align: center">New Simulation</h1>
+
+<%= form_tag("/new_simulation", multipart: true, method: "post") do %>
+  <%= field_set_tag do %>
+    <p>Number of VMs: <%= text_field_tag 'vm_num' %></p>
+    <p>Advanced <%= text_field_tag 'adv' %></p>
+	<p>Type of VMs: 
+		<%= select_tag('vm_type', options_for_select([['Default', 'Default']])) %>
+	</p>
+	<p>OS of VMs: 
+		<%= select_tag('os_type', options_for_select([['Ubuntu', 'Ubuntu']])) %>
+	</p>
+	<p>Network of VMs: 
+		<%= select_tag('net_type', options_for_select([['OpenVPN', 'OpenVPN']])) %>
+	</p>
+	<p>Deployment of VMs: 
+		<%= select_tag('deploy_type', options_for_select([['Default', 'Default'], ['OpenNebula', 'OpenNebula'], ['Amazon EC2', 'Amazon EC2']])) %>
+    </p>
+	<p>Model of Simulation: 
+		<%= select_tag('sim_type', options_for_select([['HLA', 'HLA']])) %>
+	</p>
+	<p><%= submit_tag "submit simulation task" %></p>
+  <% end %>
+<% end %>
+
+<br/>
+<a href="/">&laquo; Back</a>
+
+<%= render template: "shared/footer" %>
+
+</body>

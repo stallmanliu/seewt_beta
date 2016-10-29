@@ -1,0 +1,32 @@
+<%= render template: "shared/header" %>
+
+<h1 style="text-align: center">Virtual Machines</h1>
+<% @local_resources = @computes.resources %>
+
+<table width="100%" style="border: solid 1px; text-align: left">
+        <thead>
+                <tr style="text-align: center">
+                        <th width="20%">ID</th>
+                        <th>Backend</th>
+                        <th width="20%">Link</th>
+                </tr>
+        </thead>
+        <tbody>
+                <% @local_resources.each do |resource| %>
+                <tr>
+                        <td><%= resource.id %></td>
+                        <% if nil == resource.title %>
+                           <td>Amazon EC2</td> 
+                        <% else %>
+                          <td>OpenNebula</td>
+                        <% end %>
+                        <td><a href="<%= resource.location %>"><%= resource.location %></a></td>
+                </tr>
+                <% end %>
+        </tbody>
+</table>
+
+<br/>
+<a href="/">&laquo; Back</a>
+
+<%= render template: "shared/footer" %>

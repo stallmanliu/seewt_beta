@@ -1,0 +1,57 @@
+/* common css file */
+
+.content
+{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	min-height: 700px;
+	/*border: 1px solid red;*/
+}
+
+.left_content
+{
+	width: 29%;
+	max-height: 700px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	/*background: grey;*/
+}
+
+.center_content
+{
+	width: 70%;
+	max-height: 700px;
+	/*min-height: 500px;*/
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	/*background: grey;*/
+}
+.text_content #title
+{
+	/*display: inline;*/
+	margin: 50px auto 20px auto;
+	padding: 0;
+	width: auto;
+	height: auto;
+	/*background: white*/
+}
+.text_content #info
+{
+	text-align: left;
+	/*vertical-align: top;*/
+	margin: 0 0 50px 20%;
+}
+
+.text_content #info #phone_numbers
+{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.right_content
+{
+	display: none;
+}

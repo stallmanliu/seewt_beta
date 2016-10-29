@@ -1,0 +1,35 @@
+
+<body background="/background.jpg">
+
+<%= render template: "shared/header" %>
+
+<h1 style="text-align: center">User Management</h1>
+
+<a href="/management/user_management/new">New</a>
+<br/>
+
+<table width="100%" style="border: solid 1px; text-align: center">
+    <thead>
+            <tr style="text-align: center">
+                    <th>User Name</th>
+                    <th></th>
+                    <th></th>
+            </tr>
+    </tead>
+	<tbody>
+		<% @users.each do |user| %>
+		<tr>
+				<td><%= user.name %></td>
+				<td><a href="/management/user_management/delete">Delete</a></td>
+				<td><a href="/management/user_management/edit">Edit</a></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<br/>
+<a href="/management">&laquo; Back</a>
+
+<%= render template: "shared/footer" %>
+
+</body>

@@ -1,0 +1,43 @@
+/* common css file */
+
+
+.footer
+{
+	width:1024px;
+	margin:0 auto; 
+	padding: 0;
+	text-align: center;
+	/*border: 1px solid red;*/
+}
+
+.side_right
+{
+	visibility: hidden;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	/*padding: 150px 0 0 0;*/
+	width: 130px;
+	/*height: 800px;*/
+	/*height: auto;*/
+	/*max-width: 130px;*/
+	/*max-height: 700px;*/
+	color: white;
+	vertical-align: top;
+	/*background: url("/images/left_side.jpg");*/
+	/*background-size: 130px;*/
+	/*background-repeat: no-repeat;*/
+	/*border: 1px solid red;*/
+}
+.side_right p
+{
+	margin: 50px auto;
+}
+.side_right img
+{
+	width: 130px;
+	/*widows: 100%*/
+	position: relative;
+	top: -120px;
+	z-index: -1;
+}

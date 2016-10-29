@@ -1,0 +1,15 @@
+
+<body background="/background.jpg">
+
+<%= render template: "shared/header" %>
+
+<h1>Compute#<%= @compute.resources.first.id %></h1>
+<% @local_resource = @compute.resources.first %>
+<%= render template: "shared/resource_table" %>
+
+<br/>
+<a href="/compute/">&laquo; Back</a>
+
+<%= render template: "shared/footer" %>
+
+</body>

@@ -1,0 +1,23 @@
+
+<body background="/background.jpg">
+
+
+<%= render template: "shared/header" %>
+
+<h1 style="text-align: center">New User</h1>
+<br/>
+
+<%= form_tag("/management/user_management/new", multipart: true, method: "post") do %>
+  <%= field_set_tag do %>
+    <p>Name of New User: <%= text_field_tag 'user_name' %></p>
+    <p>Password of New User: <%= text_field_tag 'password' %></p>
+	<p><%= submit_tag "create new user" %></p>
+  <% end %>
+<% end %>
+
+<br/>
+<a href="/management/user_management">&laquo; Back</a>
+
+<%= render template: "shared/footer" %>
+
+</body>

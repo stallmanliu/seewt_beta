@@ -1,0 +1,15 @@
+
+<body background="/background.jpg">
+
+<%= render template: "shared/header" %>
+
+<h1>Network#<%= @network.resources.first.id %></h1>
+<% @local_resource = @network.resources.first %>
+<%= render template: "shared/resource_table" %>
+
+<br/>
+<a href="/network/">&laquo; Back</a>
+
+<%= render template: "shared/footer" %>
+
+</body>

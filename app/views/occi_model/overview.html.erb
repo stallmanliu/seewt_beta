@@ -1,0 +1,32 @@
+
+<body background="/background.jpg">
+
+<%= render template: "shared/header" %>
+
+<h1 style="text-align: center">Virtual Machines</h1>
+
+<table width="100%" style="border: solid 1px; text-align: left">
+        <thead>
+                <tr style="text-align: left">
+                        <th width="20%">ID</th>
+                        <th>Backend</th>
+                        <th width="20%">Location</th>
+                </tr>
+        </thead>
+        <tbody>
+                <% @vms.each do |vm| %>
+                <tr>
+                        <td><%= vm.name %></td>
+						<td><%= vm.backend %></td>
+                        <td><a href="<%= vm.location %>"><%= vm.location.split("11443").last %></a></td>
+                </tr>
+                <% end %>
+        </tbody>
+</table>
+
+<br/>
+<a href="/">&laquo; Back</a>
+
+<%= render template: "shared/footer" %>
+
+</body>

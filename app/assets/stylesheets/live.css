@@ -1,0 +1,60 @@
+/* common css file */
+
+.content
+{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	/*border: 1px solid red;*/
+}
+
+.left_content
+{
+	width: 29%;
+	max-height: auto;
+	min-height: auto;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	/*background: grey;*/
+}
+
+.center_content
+{
+	width: 70%;
+	max-height: auto;
+	/*min-height: 500px;*/
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	/*background: grey;*/
+}
+.text_content
+{
+	width: 500px;
+	margin: 0 auto;
+}
+.text_content #title
+{
+	/*display: inline;*/
+	margin: 50px auto 20px auto;
+	/*margin: 0;*/
+	padding: 0;
+	width: auto;
+	height: auto;
+	/*background: white*/
+}
+.text_content #info
+{
+	text-align: left;
+	text-indent: 2em;
+	/*vertical-align: top;*/
+	margin: 0 auto 50px auto;
+	padding: 0;
+	/*background: white;*/
+}
+
+.right_content
+{
+	display: none;
+}

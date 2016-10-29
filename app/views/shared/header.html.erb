@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SEEWT | <%= controller_name.humanize %> | <%= action_name.humanize %></title>
+  <%= stylesheet_link_tag "header.css", action_name, "footer.css", "video-js.min.css", media: "all" %>
+  <%= javascript_include_tag "header.js", action_name, "footer.js", "video.min.js", "videojs-contrib-hls.min.js" %>
+</head>
+<body>
+
+<div style="margin: auto">
+
+	<div class = "wrap" >
+
+		<div class = "display">
+
+			<div class = "side_left">
+				<p>
+					Left side AD
+				</p>
+				<img src="/images/left_side.jpg">
+				<img src="/images/left_side_1.jpg">
+			</div>
+			
+			<div class = "center">
+
+				<div class = "header">
+					<ul>
+						<li><a href="/contact">Contact</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/">Home</a></li>
+					</ul>
+				</div>
+
+				<div class = "logo">
+					<img id = "logo" src="/images/youtube_logo.png">
+					<span>Welcome to See What !</span>
+				</div>
+
+				<div class = "slides">
+					<p>
+						Adevertisements
+					</p>
+					<div class="slide">
+						<!-- <img id="img" src="/images/slide_ad_0.jpg"> -->
+						<div id="canvas">
+							<img id="img0" src="/images/slides_ad_0.jpg">
+							<img id="img1" src="/images/slides_ad_1.jpg">
+						</div>
+					</div>
+				</div>
+
+				<div class = "navigation">
+					<ul>
+						<li onmouseover="displayMenu(this)" onmouseout="hideMenu(this)">
+							<a href="/dramas">Dramas</a>
+							<ul>
+								<li><a href="">drama_0</a></li>
+								<li><a href="">drama_1</a></li>
+								<li><a href="">drama_2</a></li>
+							</ul>
+						</li>
+						<li onmouseover="displayMenu(this)" onmouseout="hideMenu(this)">
+							<a href="/movies">Movies</a>
+							<ul>
+								<li><a href="">movie_0</a></li>
+								<li><a href="">movie_1</a></li>
+								<li><a href="">movie_2</a></li>
+							</ul>
+						</li>
+						<li onmouseover="displayMenu(this)" onmouseout="hideMenu(this)">
+							<a href="/lives">Lives</a>
+							<ul>
+								<li><a href="">live_0</a></li>
+								<li><a href="">live_1</a></li>
+								<li><a href="">live_2</a></li>
+							</ul>
+						</li>
+						<li onmouseover="displayMenu(this)" onmouseout="hideMenu(this)">
+							<a href="/Management">Management</a>
+							<ul>
+								<li><a href="">management_0</a></li>
+								<li><a href="">management_1</a></li>
+								<li><a href="">management_2</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+<!-- START BODY -->

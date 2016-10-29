@@ -1,0 +1,32 @@
+
+<body background="/background.jpg">
+
+<%= render template: "shared/header" %>
+
+<h1 style="text-align: center">Backend Management</h1>
+
+<table width="100%" style="border: solid 1px; text-align: center">
+    <thead>
+            <tr style="text-align: center">
+                    <th>Backend Type</th>
+                    <th>Location</th>
+            </tr>
+    </tead>
+	<tbody>
+		<tr>
+				<td>OpenNebula</td>
+				<td>172.90.0.10</td>
+		</tr>
+		<tr>
+				<td>Amazone</td>
+				<td>172.90.0.20</td>
+		</tr>
+	</tbody>
+</table>
+
+<br/>
+<a href="/management">&laquo; Back</a>
+
+<%= render template: "shared/footer" %>
+
+</body>

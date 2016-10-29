@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>SEEWT | <%= controller_name.humanize %> | <%= action_name.humanize %></title>
+</head>
+<body>
+
+
+<!-- START BODY -->
+  <!-- <div style="float: right; margin-top: -13px;">Logged in as: rocci</div> -->
+
+
+<div id="playercontainer"></div>
+    <script type="text/javascript" src="./cyberplayer.js"></script>
+    <script type="text/javascript">
+        var player = cyberplayer("playercontainer").setup({
+        flashplayer:"./cyberplayer.flash.swf ",
+        width : 580,
+        height : 433,
+        backcolor : "#FFFFFF",
+        stretching : "uniform",
+
+        file : "https://pcs.baidu.com/rest/2.0/pcs/stream?method=download&access_token=23.3c473ff6aea5aafe94bfc16a2ee1cd8b.2592000.1480200057.2644256190-2293434&path=%2Fapps%2FSyncY%2Fseewhat%2Fmovies%2Ffushanxing.mp4",
+        ak : "2DqO88oI3V7haDilVf2YTgMI",
+        sk : "VLng6o6T4uDqYOfF",
+        autoStart : true,
+        repeat : false,
+        volume : 100,
+        controls : "over",
+	    controlbar: {
+	        barLogo: false
+	    }
+        });
+        </script>
+
+
+
+
+<!-- END BODY -->
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+<body background="/background.jpg">
+
+<%= render template: "shared/header" %>
+
+<h1>Storage</h1>
+<% @local_resources = @storages.resources %>
+<%= render template: "shared/resources_table" %>
+
+<br/>
+<a href="/">&laquo; Back</a>
+
+<%= render template: "shared/footer" %>
+
+</body>

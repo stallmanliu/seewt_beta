@@ -1,0 +1,64 @@
+{
+  "mixins":[
+    {
+      "applies":[
+        "http://schemas.ogf.org/occi/infrastructure#os_tpl"
+      ],
+      "term":"os_tpl",
+      "scheme":"http://opennebula.org/occi/infrastructure#",
+      "title":"OpenNebula specific OS_Template attributes",
+      "location":"/mixin/os_tpl/",
+	  "actions":[
+		"http://schemas.ogf.org/occi/infrastructure/os_tpl/action#clone",
+		"http://schemas.ogf.org/occi/infrastructure/os_tpl/action#update",
+		"http://schemas.ogf.org/occi/infrastructure/os_tpl/action#instantiate"
+	  ],
+      "attributes":{
+        "org":{
+          "opennebula":{
+            "os_tpl":{
+              "id":{
+                "Mutable":false,
+                "Description":"ID of the virtual network"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "actions":[
+	{
+		"scheme":"http://schemas.ogf.org/occi/infrastructure/os_tpl/action#",
+		"term":"clone",
+		"title":"Clone Operating System Template",
+		"attributes":{
+			
+		}
+	},
+	{
+		"scheme":"http://schemas.ogf.org/occi/infrastructure/os_tpl/action#",
+		"term":"update",
+		"title":"update Operating System Template",
+		"attributes":{
+			
+		}
+	},
+	{
+		"scheme":"http://schemas.ogf.org/occi/infrastructure/os_tpl/action#",
+		"term":"instantiate",
+		"title":"instantiate Operating System Template",
+		"attributes":{
+			"occi":{
+				"infrastructure":{
+					"os_tpl":{
+						"image_id":{
+							"type":"string"
+						}
+					}
+				}
+			}
+		}
+	}
+  ]
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ISSC | <%= controller_name.humanize %> | <%= action_name.humanize %></title>
+  <link href="http://vjs.zencdn.net/5.10.8/video-js.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- START BODY -->
+  <!-- <div style="float: right; margin-top: -13px;">Logged in as: rocci</div> -->
+
+
+<div class = "content">
+				<video id="video_1" class="video-js" controls preload="auto" data-setup="{}">
+					<source src="<%= @vurl %>" type="<%= @vtype %>">
+					Your Browser does not support this video !
+				</video>
+  				<%= javascript_include_tag "http://vjs.zencdn.net/5.10.8/video.js" %>
+</div>
+
+
+
+
+<!-- END BODY -->
+
+
+</body>
+</html>
